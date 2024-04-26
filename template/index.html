@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Placement Prediction</title>
+    <link rel="stylesheet" href="/staticfiles/style.css">
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="post">
+
+        <input type="text" name="ssc_p" id="research" placeholder="Percentage in 10th grade">
+        <input type="text" name="degree_p" id="research" placeholder="Percentage in Degree Education">
+        <input type="text" name="mba_p" id="research" placeholder="MBA Percentage">
+        
+
+        <h3> hsc_s	 </h3>
+        <select name="hsc_s	" id="abc">
+            <option value="0">Arts</option>
+            <option value="1">Science</option>
+            <option value="2">Commerce</option>
+        </select> 
+
+        <h3> workex </h3>
+        <select name="workex" id="g">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select> 
+
+        <br>
+        <br>
+        <button type="submit" id="sub">Prediction</button>
+        
+    </form>
+
+    <br>
+    <br>
+    {{prediction_text}}
+
+</body>
+</html>
